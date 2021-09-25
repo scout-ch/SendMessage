@@ -100,6 +100,11 @@ return [
         'emergency' => [
             'path' => storage_path('logs/laravel.log'),
         ],
-    ],
 
+        'airbrake' => [
+            'driver' => 'custom',
+            'via' => Kouz\LaravelAirbrake\AirbrakeLogger::class,
+            'level' => 'error',
+        ],
+    ],
 ];
